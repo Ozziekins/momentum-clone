@@ -1,6 +1,6 @@
 pre-commit:
   commands:
     check:
-      glob: "*.{vue,json,jsonc}"
+      glob: "*.{js,ts,jsx,tsx,vue,json,jsonc}"
       run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
       stage_fixed: true
