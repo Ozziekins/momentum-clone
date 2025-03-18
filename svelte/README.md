@@ -1,4 +1,4 @@
-# Momentum Clone (Vue.js)
+# Momentum Clone (Svelte)
 
 A minimalist, dynamic web application inspired by the Momentum Chrome extension. It greets you personally, displaying a real-time clock, weather based on your location, daily inspirational quotes, and beautiful background images that update every day.
 
