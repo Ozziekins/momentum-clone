@@ -1,20 +1,23 @@
 <script>
-	import { onMount } from "svelte";
-	import axios from "axios";
+import axios from "axios";
+import { onMount } from "svelte";
 
-	let quote = "Stay inspired!";
+let _quote = "Stay positive, work hard, make it happen.";
 
-	onMount(async () => {
-		try {
-			const res = await axios.get("https://api.quotable.io/random");
-			quote = res.data.content;
-		} catch (error) {
-			console.error(error);
-		}
-	});
+const fetchQuote = async () => {
+	try {
+		const { data } = await axios.get("/zenquotes/api/random");
+		_quote = data[0].q;
+	} catch (error) {
+		console.error("Quote fetching error, using fallback:", error);
+		_quote = "Do what you can, with what you have, where you are.";
+	}
+};
+
+onMount(fetchQuote);
 </script>
 
-<blockquote>"{quote}"</blockquote>
+<blockquote>"{_quote}"</blockquote>
 
 <style>
 	blockquote {
