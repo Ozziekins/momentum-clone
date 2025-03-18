@@ -1,0 +1,27 @@
+{
+  "name": "momentum-clone-svelte",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "svelte": "^5.20.2",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "axios": "^1.8.3",
+    "biome": "^0.3.3",
+    "lefthook": "^1.11.3",
+    "moment": "^2.30.1",
+    "uri-js": "^4.4.1"
+  }
+}

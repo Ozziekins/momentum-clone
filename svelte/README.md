@@ -16,7 +16,7 @@ A minimalist, dynamic web application inspired by the Momentum Chrome extension.
 
 ## 🚀 Built with
 
-- [Vue.js 3](https://vuejs.org/)
+- [Svelte](https://svelte.dev/)
 - [Vite](https://vitejs.dev/)
 - [Axios](https://axios-http.com/) for HTTP requests
 - [Moment.js](https://momentjs.com/) for date and time handling
@@ -31,7 +31,7 @@ Clone and navigate to the project directory:
 ```bash
 git clone https://github.com/Ozziekins/momentum-clone.git
 cd momentum-clone
-cd vue
+cd svelte
 ```
 
 Install dependencies:
@@ -40,7 +40,7 @@ Install dependencies:
 npm install
 ```
 
-Create a `.env` file in the vue directory with your API keys:
+Create a `.env` file in the svelte directory with your API keys:
 
 ```env
 VITE_UNSPLASH_ACCESS_KEY=your_unsplash_access_key
@@ -63,7 +63,7 @@ Run the development server:
 npm run dev
 ```
 
-Your app will now be accessible at [`http://localhost:5173`](http://localhost:5173).
+Your app will now be accessible at [`http://localhost:5174`](http://localhost:5174).
 
 ## 🛠️ Development workflow
 
@@ -81,21 +81,22 @@ npm run format
 ```bash
 .
 ├── src
-│   ├── components
-│   │   ├── BackgroundImage.vue
-│   │   ├── ClockDisplay.vue
-│   │   ├── DateDisplay.vue
-│   │   ├── GreetingCard.vue
-│   │   ├── DailyQuote.vue
-│   │   └── WeatherWidget.vue
-│   ├── App.vue
+│   ├── lib
+│   │   ├── BackgroundImage.svelte
+│   │   ├── ClockDisplay.svelte
+│   │   ├── DateDisplay.svelte
+│   │   ├── GreetingCard.svelte
+│   │   ├── DailyQuote.svelte
+│   │   └── WeatherWidget.svelte
+│   ├── App.svelte
 │   └── main.js
-│   └── style.css
+│   └── app.css
 ├── .env
 ├── index.html
 ├── biome.json
 └── package.json
 ├── vite.config.js
+├── svelte.config.js
 ```
 
 ## 🌐 Deployment
