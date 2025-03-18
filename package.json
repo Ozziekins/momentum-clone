@@ -7,7 +7,6 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-		"prepare": "husky",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
 		"format": "biome format --write ."
@@ -23,8 +22,6 @@
 		"@biomejs/biome": "1.9.4",
 		"@vitejs/plugin-vue": "^5.2.1",
 		"biome": "^0.3.3",
-		"git-format-staged": "^3.1.1",
-		"husky": "^9.1.7",
 		"vite": "^6.2.0"
 	}
 }
