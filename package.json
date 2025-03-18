@@ -1,27 +1,11 @@
 {
-	"name": "momentum-clone",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview",
-		"lint": "biome check .",
-		"lint:fix": "biome check --write .",
-		"format": "biome format --write ."
-	},
-	"dependencies": {
-		"axios": "^1.8.3",
-		"lefthook": "^1.11.3",
-		"moment": "^2.30.1",
-		"uri-js": "^4.2.2",
-		"vue": "^3.5.13"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@vitejs/plugin-vue": "^5.2.1",
-		"biome": "^0.3.3",
-		"vite": "^6.2.0"
-	}
+    "scripts": {
+        "lint": "biome check vue svelte",
+        "lint:fix": "biome check --write vue svelte",
+        "format": "biome format --write vue svelte"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
+        "lefthook": "^1.11.3"
+    }
 }
