@@ -1,1 +1,4 @@
-git-format-staged --formatter 'biome check --write --files-ignore-unknown=true --no-errors-on-unmatched \"{}\"' .
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx git-format-staged --formatter 'biome check --write --files-ignore-unknown=true --no-errors-on-unmatched \"{}\"' .
