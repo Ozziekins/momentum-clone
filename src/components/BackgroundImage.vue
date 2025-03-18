@@ -10,8 +10,6 @@ import { computed, onMounted, ref } from "vue";
 
 const UNSPLASH_ACCESS_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 const imageUrl = ref("");
-const imageUrl2 = ref("");
-const x = isNan(0);
 
 onMounted(async () => {
 	try {
