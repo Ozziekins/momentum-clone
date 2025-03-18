@@ -5,15 +5,15 @@
   </template>
   
   <script setup>
-  import { ref, onMounted } from "vue";
-  import moment from "moment";
-  
-  const currentDate = ref("");
-  
-  onMounted(() => {
-    currentDate.value = moment().format("dddd, MMMM Do YYYY");
-  });
-  </script>
+import moment from "moment";
+import { onMounted, ref } from "vue";
+
+const currentDate = ref("");
+
+onMounted(() => {
+	currentDate.value = moment().format("dddd, MMMM Do YYYY");
+});
+</script>
   
   <style scoped>
   .date-display {

@@ -5,20 +5,20 @@
   </template>
   
   <script setup>
-  import { ref, onMounted } from "vue";
-  import moment from "moment";
-  
-  const currentTime = ref("");
-  
-  const updateTime = () => {
-    currentTime.value = moment().format("HH:mm:ss");
-  };
-  
-  onMounted(() => {
-    updateTime();
-    setInterval(updateTime, 1000);
-  });
-  </script>
+import moment from "moment";
+import { onMounted, ref } from "vue";
+
+const currentTime = ref("");
+
+const updateTime = () => {
+	currentTime.value = moment().format("HH:mm:ss");
+};
+
+onMounted(() => {
+	updateTime();
+	setInterval(updateTime, 1000);
+});
+</script>
   
   <style scoped>
   .clock {

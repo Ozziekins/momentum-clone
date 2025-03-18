@@ -13,24 +13,24 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import GreetingCard from './components/GreetingCard.vue';
-import ClockDisplay from './components/ClockDisplay.vue';
-import DateDisplay from './components/DateDisplay.vue';
-import DailyQuote from './components/DailyQuote.vue';
-import BackgroundImage from './components/BackgroundImage.vue';
-import WeatherWidget from './components/WeatherWidget.vue';
+import { onMounted, ref } from "vue";
+import BackgroundImage from "./components/BackgroundImage.vue";
+import ClockDisplay from "./components/ClockDisplay.vue";
+import DailyQuote from "./components/DailyQuote.vue";
+import DateDisplay from "./components/DateDisplay.vue";
+import GreetingCard from "./components/GreetingCard.vue";
+import WeatherWidget from "./components/WeatherWidget.vue";
 
 const userName = ref("");
 
 onMounted(() => {
-  const storedName = localStorage.getItem('daily-app-user');
-  if (storedName) {
-    userName.value = storedName;
-  } else {
-    userName.value = prompt("What's your name?");
-    localStorage.setItem('daily-app-user', userName.value);
-  }
+	const storedName = localStorage.getItem("daily-app-user");
+	if (storedName) {
+		userName.value = storedName;
+	} else {
+		userName.value = prompt("What's your name?");
+		localStorage.setItem("daily-app-user", userName.value);
+	}
 });
 </script>
 
