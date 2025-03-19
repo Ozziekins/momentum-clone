@@ -32,7 +32,7 @@
 	},
 	"overrides": [
 		{
-			"include": ["*.vue"],
+			"include": ["*.vue", "*.svelte"],
 			"linter": { "rules": { "correctness": { "noUnusedVariables": "off" } } }
 		}
 	]
