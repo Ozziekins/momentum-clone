@@ -4,6 +4,10 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
 	plugins: [vue()],
+	test: {
+		environment: "jsdom",
+		globals: true,
+	},
 	server: {
 		proxy: {
 			"/zenquotes": {

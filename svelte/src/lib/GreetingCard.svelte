@@ -1,16 +1,65 @@
 <script>
-	export let userName;
+import { onMount } from "svelte";
+
+let userName = "Click to enter name";
+let editMode = false;
+
+onMount(() => {
+	const storedName = localStorage.getItem("userName");
+	if (storedName) userName = storedName;
+});
+
+const saveName = () => {
+	localStorage.setItem("userName", userName);
+	editMode = false;
+};
+
+function getGreeting() {
 	const hour = new Date().getHours();
-	const greeting =
-		hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening";
+	if (hour < 12) return "Good morning";
+	if (hour < 18) return "Good afternoon";
+	return "Good evening";
+}
 </script>
-
-<h2 class="greeting">{greeting}, {userName} :)</h2>
-
-<style>
+  
+  {#if editMode}
+	<input
+	  class="username-input"
+	  bind:value={userName}
+	  on:blur={saveName}
+	  on:keyup="{(e) => e.key === 'Enter' && saveName()}"
+	/>
+  {:else}
+	<button class="greeting" on:click={() => (editMode = true)} on:keydown="{(e) => e.key === 'Enter' && (editMode = true)}">
+	  {getGreeting()}, <span class="username">{userName}</span> :)
+	</button>
+  {/if}
+  
+  <style>
 	.greeting {
-		color: white;
-		text-align: center;
-		font-size: 1.8rem;
+	  font-size: 2rem;
+	  text-align: center;
+	  cursor: pointer;
+	  border: none;
+	  background: none;
+	  color: white;
+	  font-weight: bold;
+	  padding: 10px;
 	}
-</style>
+  
+	.username {
+	  font-weight: bold;
+	  color: lightblue;
+	}
+  
+	.username-input {
+	  font-size: 2rem;
+	  text-align: center;
+	  border: none;
+	  background: none;
+	  color: white;
+	  width: 100%;
+	  outline: none;
+	}
+  </style>
+  

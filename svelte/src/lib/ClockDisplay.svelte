@@ -1,13 +1,13 @@
 <script>
-	import { onMount } from "svelte";
-	import moment from "moment";
-	let currentTime;
+import moment from "moment";
+import { onMount } from "svelte";
+let currentTime;
 
-	onMount(() => {
-		setInterval(() => {
-			currentTime = moment().format("HH:mm:ss");
-		}, 1000);
-	});
+onMount(() => {
+	setInterval(() => {
+		currentTime = moment().format("HH:mm:ss");
+	}, 1000);
+});
 </script>
 
 <div class="clock">
@@ -18,7 +18,7 @@
 	.clock {
 		color: white;
 		text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-		font-size: 3rem;
+		font-size: 2rem;
 		text-align: center;
 	}
 </style>
