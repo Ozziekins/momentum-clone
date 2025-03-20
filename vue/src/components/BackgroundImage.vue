@@ -1,8 +1,8 @@
 <template>
-    <div class="bg" :style="backgroundStyle">
-      <slot />
-    </div>
-  </template>
+	<div class="bg" :style="backgroundStyle" role="presentation">
+	  <slot />
+	</div>
+  </template>  
   
   <script setup>
 import axios from "axios";
