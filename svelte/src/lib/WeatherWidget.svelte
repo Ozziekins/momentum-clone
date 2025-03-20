@@ -1,27 +1,27 @@
 <script>
-	import { onMount } from "svelte";
-	import axios from "axios";
+import axios from "axios";
+import { onMount } from "svelte";
 
-	let weather;
-	const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
+let weather;
+const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
-	onMount(() => {
-		navigator.geolocation.getCurrentPosition(
-			(pos) => fetchWeather(pos.coords.latitude, pos.coords.longitude),
-			() => fetchWeather(41.3851, 2.1734) // Barcelona fallback
+onMount(() => {
+	navigator.geolocation.getCurrentPosition(
+		(pos) => fetchWeather(pos.coords.latitude, pos.coords.longitude),
+		() => fetchWeather(41.3851, 2.1734), // Barcelona fallback
+	);
+});
+
+async function fetchWeather(lat, lon) {
+	try {
+		const res = await axios.get(
+			`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`,
 		);
-	});
-
-	async function fetchWeather(lat, lon) {
-		try {
-			const res = await axios.get(
-				`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
-			);
-			weather = res.data;
-		} catch (error) {
-			console.error(error);
-		}
+		weather = res.data;
+	} catch (error) {
+		console.error(error);
 	}
+}
 </script>
 
 {#if weather}

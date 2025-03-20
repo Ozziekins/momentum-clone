@@ -1,0 +1,72 @@
+name: Verify Code Quality
+
+on: [push, pull_request]
+
+jobs:
+  verify-vue:
+    name: Verify Vue App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies for Vue
+        run: |
+          cd vue
+          npm install
+
+      - name: Run Linter for Vue
+        run: |
+          cd vue
+          npm run lint:fix
+
+      - name: Run Formatter Check for Vue
+        run: |
+          cd vue
+          npm run format
+
+      - name: Run Tests for Vue
+        run: |
+          cd vue
+          npm run test
+
+  verify-svelte:
+    name: Verify Svelte App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies for Svelte
+        run: |
+          cd svelte
+          npm install
+
+      - name: Run Linter for Svelte
+        run: |
+          cd svelte
+          npm run lint:fix
+
+      - name: Run Formatter Check for Svelte
+        run: |
+          cd svelte
+          npm run format
+
+      - name: Run Tests for Svelte
+        run: |
+          cd svelte
+          npm run test

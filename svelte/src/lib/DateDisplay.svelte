@@ -1,6 +1,6 @@
 <script>
-	import moment from "moment";
-	let currentDate = moment().format("dddd, MMMM Do YYYY");
+import moment from "moment";
+const currentDate = moment().format("dddd, MMMM Do YYYY");
 </script>
 
 <div class="date-display">
