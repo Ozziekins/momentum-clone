@@ -10,7 +10,7 @@ A minimalist, dynamic web application inspired by the Momentum Chrome extension.
 [![Vercel Status](https://deploy-badge.vercel.app/vercel/reactions-demo?style=plastic)](https://deploy-badge.vercel.app/vercel/reactions-demo?style=plastic)
 </div>
 
-### <div align="center"> [Check out the demo here](https://momentum-clone-svelte-ozziekins-projects.vercel.app/) </div>
+### <div align="center"> [Check out the demo here](https://momentum-clone-vue-ozziekins-projects.vercel.app/) </div>
 
 ## 🌟 Features
 
