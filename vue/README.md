@@ -1,6 +1,16 @@
 # Momentum Clone (Vue.js)
 
-A minimalist, dynamic web application inspired by the Momentum Chrome extension. It greets you personally, displaying a real-time clock, weather based on your location, daily inspirational quotes, and beautiful background images that update every day.
+A minimalist, dynamic web application inspired by the Momentum Chrome extension. It greets you personally, displaying a real-time clock, weather based on your. location, daily inspirational quotes, and beautiful background images that update every day.
+<br/<div align="center">   
+[![Vue badge](https://img.shields.io/badge/made%20with-vue-green?style=plastic&logo=vue.js)](https://vuejs.org/)
+[![Vite badge](https://img.shields.io/badge/made%20using-vite-purple?style=plastic&logo=vite)](https://vite.dev/)
+[![Vitest](https://img.shields.io/badge/tested%20with-vitest-yellow?style=plastic&logo=vitest)](https://vitest.dev/)
+[![Biome](https://img.shields.io/badge/formatted%20with-biome-blue?style=plastic&logo=biome)](https://biomejs.dev/)
+[![CI](https://github.com/Ozziekins/momentum-clone/actions/workflows/verify.yml/badge.svg)](https://github.com/Ozziekins/momentum-clone/actions)
+[![Vercel Status](https://deploy-badge.vercel.app/vercel/reactions-demo?style=plastic)](https://deploy-badge.vercel.app/vercel/reactions-demo?style=plastic)
+</div>
+
+### <div align="center"> [Check out the demo here](https://momentum-clone-svelte-ozziekins-projects.vercel.app/) </div>
 
 ## 🌟 Features
 
