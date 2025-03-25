@@ -1,4 +1,4 @@
-# Momentum Clone Monorepo
+# Momentum Clone 
 
 This monorepo hosts multiple implementations of the Momentum-inspired web application in different frontend frameworks. Each implementation offers the same functionality:
 
