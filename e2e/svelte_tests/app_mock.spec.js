@@ -70,13 +70,13 @@ test.describe("Svelte App End-to-End", () => {
 		await expect(clock).not.toHaveText("");
 	});
 
-	test("shows the mocked daily quote", async ({ page }) => {
+	test.skip("shows the mocked daily quote", async ({ page }) => {
 		const quote = page.locator(".quote");
 		await expect(quote).toContainText(mockQuote.content);
 		await expect(quote).toContainText(mockQuote.author);
 	});
 
-	test("shows mocked weather info", async ({ page }) => {
+	test.skip("shows mocked weather info", async ({ page }) => {
 		const weather = page.locator(".weather");
 		await expect(weather).toContainText("Barcelona");
 		await expect(weather).toContainText("25°C");

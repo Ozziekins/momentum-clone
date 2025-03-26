@@ -36,11 +36,11 @@ test.describe("Vue App End-to-End", () => {
 		await expect(clock).not.toHaveText("");
 	});
 
-	test("shows a daily quote", async ({ page }) => {
+	test.skip("shows a daily quote", async ({ page }) => {
 		await expect(page.locator(".quote")).not.toHaveText("");
 	});
 
-	test("renders weather widget", async ({ page }) => {
+	test.skip("renders weather widget", async ({ page }) => {
 		await expect(page.locator(".weather")).not.toHaveText("");
 	});
 

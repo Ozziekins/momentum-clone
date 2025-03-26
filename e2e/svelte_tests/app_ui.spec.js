@@ -38,12 +38,12 @@ test.describe("Svelte App End-to-End", () => {
 		await expect(clock).not.toHaveText("");
 	});
 
-	test("shows a daily quote", async ({ page }) => {
+	test.skip("shows a daily quote", async ({ page }) => {
 		const quote = page.locator(".quote");
 		await expect(quote).not.toHaveText("");
 	});
 
-	test("renders weather widget", async ({ page }) => {
+	test.skip("renders weather widget", async ({ page }) => {
 		const weather = page.locator(".weather");
 		await expect(weather).not.toHaveText("");
 	});

@@ -94,13 +94,13 @@ export default defineConfig({
 	/* Run your local dev server before starting the tests */
 	webServer: [
 		{
-			command: "npm run dev --workspace vue",
+			command: "cd vue && npm i && npm run dev",
 			url: "http://localhost:5173",
 			timeout: 20_000,
 			reuseExistingServer: !process.env.CI,
 		},
 		{
-			command: "npm run dev --workspace svelte",
+			command: "cd svelte && npm i && npm run dev",
 			url: "http://localhost:5174",
 			timeout: 20_000,
 			reuseExistingServer: !process.env.CI,
