@@ -1,11 +1,16 @@
 {
-    "scripts": {
-        "lint": "biome check vue svelte",
-        "lint:fix": "biome check --write vue svelte",
-        "format": "biome format --write vue svelte"
-    },
-    "devDependencies": {
-        "@biomejs/biome": "^1.9.4",
-        "lefthook": "^1.11.3"
-    }
+	"scripts": {
+		"lint": "biome check vue svelte",
+		"lint:fix": "biome check --write vue svelte",
+		"format": "biome format --write vue svelte"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@playwright/test": "^1.51.1",
+		"@types/node": "^22.13.12",
+		"lefthook": "^1.11.3"
+	},
+	"dependencies": {
+		"dotenv": "^16.4.7"
+	}
 }
