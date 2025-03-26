@@ -1,6 +1,6 @@
 # Momentum Clone 
 
-This monorepo hosts multiple implementations of the Momentum-inspired web application in different frontend frameworks. Each implementation offers the same functionality:
+This monorepo hosts two implementations [[vue demo](https://momentum-clone-vue-ozziekins-projects.vercel.app/) and [svelte demo](https://momentum-clone-svelte-ozziekins-projects.vercel.app/)] of the Momentum-inspired web application in different frontend frameworks. Each implementation offers the same functionality:
 
 - Dynamic daily backgrounds
 - Real-time clock and date
