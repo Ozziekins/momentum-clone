@@ -84,20 +84,16 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies
+      - name: Install dependencies for vue dev server
         run: |
-          cd e2e/vue_tests
+          cd vue
           npm install
 
       - name: Install Playwright Browsers
-        run: |
-          cd e2e/vue_tests
-          npx playwright install --with-deps
+        run: npx playwright install --with-deps
 
       - name: Run Playwright Tests
-        run: |
-          cd e2e/vue_tests
-          npx playwright test
+        run: npx playwright test
 
   e2e-svelte:
     name: E2E Tests – Svelte App
@@ -114,20 +110,16 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies
+      - name: Install dependencies for svelte server
         run: |
-          cd e2e/svelte_tests
+          cd svelte
           npm install
 
       - name: Install Playwright Browsers
-        run: |
-          cd e2e/svelte_tests
-          npx playwright install --with-deps
+        run: npx playwright install --with-deps
 
       - name: Run Playwright Tests
-        run: |
-          cd e2e/svelte_tests
-          npx playwright test                
+        run: npx playwright test                
 
   deploy-vue:
     name: Deploy Vue App
